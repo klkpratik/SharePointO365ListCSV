@@ -57,13 +57,13 @@ namespace SharePointCSOMExport
                 //new datatable
                 DataTable data = new DataTable();
 
-                //add column names (internal names from URL)
+                //add column names - (Column headers as needed in csv file)
                 data.Columns.Add("Title", typeof(string));
                 data.Columns.Add("Actual_Units_Scanned", typeof(Int32));
                 data.Columns.Add("Attainment", typeof(double));
                 data.Columns.Add("Created_By", typeof(string));
 
-                //add each row to datarow
+                //add each row to datarow - (internal name of column from URL)
                 foreach (ListItem item in items)
                 {
                     data.Rows.Add(item["LineLead"], item["Actual_x0020_Units_x0020_Scanned"], item["Attainment"], item["Created"]);
